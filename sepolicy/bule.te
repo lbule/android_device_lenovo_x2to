@@ -1,0 +1,20 @@
+# bule-specific policies
+
+type x2to_exec, exec_type, file_type;
+type x2to, domain;
+
+permissive ext_mdinit;
+init_daemon_domain(ext_mdinit)
+
+type ext_mdinit_exec, exec_type, file_type;
+type ext_mdinit, domain;
+
+permissive extmdlogger;
+init_daemon_domain(extmdlogger)
+
+type extmdlogger_exec, exec_type, file_type;
+type extmdlogger, domain;
+
+permissive x2to;
+init_daemon_domain(x2to)
+
